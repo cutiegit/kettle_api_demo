@@ -1,0 +1,18 @@
+kettle 相关依赖仓库
+https://nexus.pentaho.org/#browse/search
+
+
+pom文件仓库配置
+	<repositories>
+		<repository>
+			<id>pentaho-repo</id>
+			<url>http://repository.pentaho.org/artifactory/repo/</url>
+		</repository>
+	</repositories>
+	
+
+下载失败可尝试从仓库下载后本地安装	
+mvn install:install-file -DgroupId=pentaho-kettle   -DartifactId=kettle-engine      -Dversion=8.2.0.0-342 -Dpackaging=jar -Dfile=C:\Users\root\Desktop\kettle-engine-8.2.0.0-342.jar
+mvn install:install-file -DgroupId=pentaho-kettle   -DartifactId=kettle-core        -Dversion=8.2.0.0-342 -Dpackaging=jar -Dfile=C:\Users\root\Desktop\kettle-core-8.2.0.0-342.jar
+mvn install:install-file -DgroupId=pentaho          -DartifactId=metastore          -Dversion=8.2.0.0-342 -Dpackaging=jar -Dfile=C:\Users\root\Desktop\metastore-8.2.0.0-342.jar
+mvn install:install-file -DgroupId=pentaho-kettle   -DartifactId=kettle-dbdialog    -Dversion=8.2.0.0-342 -Dpackaging=jar -Dfile=C:\Users\root\Desktop\kettle-dbdialog-8.2.0.0-342.jar
